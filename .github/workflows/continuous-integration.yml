@@ -1,0 +1,26 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: 
+      - master
+      - develop
+
+jobs:
+  tests:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: install-and-cache-composer-dependencies
+      uses: lukekortunov/php-composer-install-and-cache@v1
+    
+    - name: PHPUnit (graychen)
+      uses: Graychen/phpunit-action@v1.0.0
+      with:
+        config: phpunit.xml

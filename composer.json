@@ -1,0 +1,29 @@
+{
+  "name": "reinert/project-automation",
+  "type": "composer-plugin",
+  "description": "Simply run one command! Build Your projects with many plugins, configurations and dependencies with one command.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Charles Reinert",
+      "email": "charles@reinert.one"
+    }
+  ],
+  "require": {
+    "composer/composer": "1.0.*@dev",
+    "symfony/filesystem": "^4.3"},
+  "require-dev": {
+    "phpunit/phpunit": "^8",
+    "mikey179/vfsstream": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Reinert\\ComposerFileManipulator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Reinert\\ComposerFileManipulator\\Tests\\": "tests/"
+    }
+  }
+}
