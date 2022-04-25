@@ -10,12 +10,6 @@ Scripts are called via events definied in composer.json file.
 
 Read More: https://getcomposer.org/doc/articles/scripts.md
 
-## Installation
-
-```bash
-composer require reinert/composer-file-manipulator
-```
-
 
 ## Usage
 You need to edit your composer.json file.
